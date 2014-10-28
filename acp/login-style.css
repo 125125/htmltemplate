@@ -1,0 +1,65 @@
+body {
+  margin:0;
+  padding:0;
+  background-color:black;
+}
+
+#login-bg 
+{
+	height:282px;
+	width:482px;
+	margin-top:15%;
+	background-image:url('images/login-bg.png');
+}
+
+#logo 
+{
+	height:31px;
+	width:125px;
+	position:relative;
+	top:105px;
+	background-image:url('images/logo.png');
+}
+
+#avatar 
+{
+	height:116px;
+	width:116px;
+	margin-top:-15px;
+	background-image:url('images/login-avatar.jpg');
+}
+
+#user {
+  margin-top:20px;
+  width:202px;
+  height:32px;
+  background-image:url('images/login-user.png');
+  background-color:transparent;
+  padding-left:35px;
+  border:none;
+  outline:none;
+  font-family: Myriad Pro;
+  color:white;
+}
+
+#pass {
+  width:202px;
+  height:32px;
+  background-image:url('images/login-pass.png');
+  background-color:transparent;
+  padding-left:35px;
+  border:none;
+  outline:none;
+  font-family: Myriad Pro;
+  color:white;
+}
+
+#submit {
+  width:54px;
+  height:33px;
+  margin-top:5px;
+  background-image:url('images/login-submit.png');
+  background-color:transparent;
+  border:none;
+  outline:none;
+}
