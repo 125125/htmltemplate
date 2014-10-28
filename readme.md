@@ -1,2 +1,2 @@
-<h1><b>My Html Template</b></h1><br>
-<b>Created By: <font color="red">Tim Levinsson</font></b>
+<h1>My Html Template</h1><br>
+Created By: <i>Tim Levinsson</i>
