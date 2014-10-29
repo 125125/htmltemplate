@@ -27,8 +27,8 @@ switch($page)
 	case "download":
         @include('pages/download.php');
         break;
-	case "test":
-        @include('pages/test.php');
+	case "success":
+        @include('pages/upload_success.php');
         break;
     default:
         @include('pages/error.php');

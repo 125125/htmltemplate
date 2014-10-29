@@ -14,7 +14,6 @@
         <li><a href="/forum">Forum</a></li>
         <li><a href="?p=connect">Connection Guide</a></li>
 		<li><a href="?p=download">Download</a></li>
-		<li><a href="?p=test">PhP Tests</a></li>
 		<?php
 		if ($_SESSION['username'] == ""){
 		?>
