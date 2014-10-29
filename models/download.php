@@ -11,9 +11,10 @@ if (mysqli_connect_errno()) {
 $size = mysqli_real_escape_string($con, $_POST['size']);
 $file = mysqli_real_escape_string($con, $_POST['filename']);
 $url = mysqli_real_escape_string($con, $_POST['url']);
+$type = mysqli_real_escape_string($con, $_POST['type']);
 
 $sql="INSERT INTO download (size, file, url, uploader)
-VALUES ('$size', '$file', '$url', '".$_SESSION['username']."')";
+VALUES ('$size', '$file', '$url', '".$_SESSION['username']."', '$type')";
 
 if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));

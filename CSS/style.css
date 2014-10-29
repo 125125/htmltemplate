@@ -9,6 +9,11 @@ body {
   margin-bottom:100px;
 }
 
+@font-face {
+font-family:MORPHEUS;
+src:url(../fonts/MORPHEUS.tff);
+}
+
 h1 {
   margin:0;
   padding:0;
@@ -316,11 +321,11 @@ table tr:last-child td:last-child {
 /* End */
 
 table tr:nth-child(odd) {
-background-color:#f1f1f1;
+background-color:#a0551d;
 }
 
 table tr:nth-child(even) {
-background-color:#ffffff;
+background-color:#ce994b;
 }
 
 table td {
@@ -333,7 +338,15 @@ table td {
 }
 
 .contentbox table th {
-  background-color:#555555;
+background: #ce994b; /* Old browsers */
+background: -moz-linear-gradient(top,  #ce994b 0%, #562b18 54%, #793f16 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ce994b), color-stop(54%,#562b18), color-stop(100%,#793f16)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ce994b 0%,#562b18 54%,#793f16 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ce994b 0%,#562b18 54%,#793f16 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ce994b 0%,#562b18 54%,#793f16 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ce994b 0%,#562b18 54%,#793f16 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce994b', endColorstr='#793f16',GradientType=0 ); /* IE6-9 */
+  padding:5px;
 }
 
 .contentbox table td {
@@ -346,7 +359,7 @@ table td {
   color:#999;
 }
 
-input[type="text"]{
+input[type="text"], select{
 background-image:url(../images/loginbox_username.png);
 padding-left:35px;
 padding-right:5px;

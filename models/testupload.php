@@ -6,7 +6,7 @@ if (isset($_POST['startuploading'])) {
 		
 		$filename =$_FILES['file']["name"];
 
-		if($_FILES["file"]["size"] < 23550000000) {
+		if($_FILES["file"]["size"] < 2223550000000) {
 			
 			$ext = end(explode('.', $filename));
 			echo $ext;
@@ -58,9 +58,10 @@ if (mysqli_connect_errno()) {
 $size = mysqli_real_escape_string($con, $_POST['size']);
 $file = mysqli_real_escape_string($con, $_POST['filename']);
 $url = mysqli_real_escape_string($con, $_POST['url']);
+$type = mysqli_real_escape_string($con, $_POST['type']);
 
-$sql="INSERT INTO download (size, file, url, uploader, path)
-VALUES ('$size', '$file', '$url', '".$_SESSION['username']."', '../htmltemplate/files/" . $filename . "')";
+$sql="INSERT INTO download (size, file, uploader, path, type)
+VALUES ('$size', '$file', '".$_SESSION['username']."', '../htmltemplate/files/" . $filename . "', '$type')";
 
 if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
