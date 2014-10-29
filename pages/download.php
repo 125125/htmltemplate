@@ -1,3 +1,5 @@
+<?php include 'include/gmlevel.php'; ?>
+<?php if ($gmlevel > 0) {?>
 <div class="content">
       <div class="contentbox">
 			<center>
@@ -10,6 +12,9 @@
 			</center>
       </div>
 </div>
+<?php
+}
+?>
 <div class="content">
       <div class="contentbox">
 			<center>
@@ -18,7 +23,7 @@
 					<tr>
 						<th>File Size</th>
 						<th>File Name</th>
-						<th>URL</th>
+						<th>Link</th>
 						<th>Post Date</th>
 						<th>Last Updated</th>
 						<th>Uploaded By</th>
@@ -33,7 +38,7 @@ $result = mysql_query("SELECT id, size, file, url, post_date, update_date, uploa
 while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 	echo "<tr><td>". $row[1]. "</td>
 			<td>". $row[2]. "</td>
-			<td><a href='$row[3]' target='_BLANK'>". $row[3]. "</a></td>
+			<td><a href='$row[3]' target='_BLANK'>". $row[2]. "</a></td>
 			<td>". $row[4]. "</td>
 			<td>". $row[5]. "</td>
 			<td>". $row[6]. "</td></tr>";
