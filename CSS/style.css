@@ -318,6 +318,10 @@ table tr:last-child td:last-child {
     border-bottom-right-radius:5px
 }
 
+table td:last-child {
+text-transform:capitalize;
+}
+
 /* End */
 
 table tr:nth-child(odd) {

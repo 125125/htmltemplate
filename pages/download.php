@@ -39,7 +39,7 @@ mysql_connect("localhost", "root", "") or
     die("Could not connect: " . mysql_error());
 mysql_select_db("htmltemplate");
 
-$result = mysql_query("SELECT id, size, file, post_date, update_date, uploader, path FROM download WHERE type='1' ORDER BY id DESC");
+$result = mysql_query("SELECT id, size, file, post_date, update_date, uploader, path FROM download WHERE type='1' ORDER BY update_date DESC");
 
 while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 	echo "<tr><td>". $row[1]. "</td>
@@ -76,7 +76,7 @@ mysql_connect("localhost", "root", "") or
     die("Could not connect: " . mysql_error());
 mysql_select_db("htmltemplate");
 
-$result = mysql_query("SELECT id, size, file, post_date, update_date, uploader, path FROM download WHERE type='2' ORDER BY id DESC");
+$result = mysql_query("SELECT id, size, file, post_date, update_date, uploader, path FROM download WHERE type='2' ORDER BY update_date DESC");
 
 while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 	echo "<tr><td>". $row[1]. "</td>
