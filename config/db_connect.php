@@ -1,10 +1,10 @@
 <?php
 session_start();
-@include('../install/config/db_connect.php');
 $host = $_SESSION['host'];
-$user = $_SESSION['user'];
-$pass = $_SESSION['pass'];
-$webdb =  $_SESSION['dbname'];
-$accdb =  $_SESSION['authdb'];
+$dbuser = $_SESSION['user'];
+$dbpass = $_SESSION['pass'];
+$dbname =  $_SESSION['dbname'];
+$authdb=  $_SESSION['authdb'];
 $chardb =  $_SESSION['chardb'];
+$worlddb =  $_SESSION['worlddb'];
 ?>

@@ -1,6 +1,7 @@
 <?php
 require_once '../models/check_login.php';
-$con=mysqli_connect("localhost","root","","htmltemplate");
+include '../install/config/db_install.php';
+$con=mysqli_connect("$host","$dbuser","$dbpass","$dbname");
 
 // Check connection
 if (mysqli_connect_errno()) {

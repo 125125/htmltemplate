@@ -1,7 +1,7 @@
 <?php
 @include('db_connect.php');
 
-$connection = mysql_connect($host, $user, $pass, $chardb);
+$connection = mysql_connect($host, $dbuser, $dbpass, $chardb);
 if (!$connection){
     die("Database Connection Failed" . mysql_error());
 }

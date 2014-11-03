@@ -21,6 +21,9 @@ switch($page)
 	case "logout":
         @include('models/logout.php');
         break;
+	case "destroy":
+        @include('models/destroy_sessions.php');
+        break;
     case "register_success":
         @include('pages/register_success.php');
         break;

@@ -7,8 +7,8 @@
 					<input type="text" name="size" placeholder="File Size"><br>
 					<input type="text" name="filename" placeholder="File Name"><br>
 					<select name="type" style="width:250px; height:36px;">
-						<option value="1">Addon</option>
-						<option value="2">Patch</option>
+						<option value="1">Patch</option>
+						<option value="2">Addon</option>
 					</select><br>
 					<input type="file" name="file" id="file" /><br>
 					<input type="submit" value="Upload File!" />
@@ -35,9 +35,8 @@
 						<th>Uploaded By</th>
 					</tr>
 <?php
-mysql_connect("localhost", "root", "") or
-    die("Could not connect: " . mysql_error());
-mysql_select_db("htmltemplate");
+mysql_connect($host, $dbuser, $dbpass) or die( " Unable to connect to server ");
+mysql_select_db($dbname);
 
 $result = mysql_query("SELECT id, size, file, post_date, update_date, uploader, path FROM download WHERE type='1' ORDER BY update_date DESC");
 
@@ -72,9 +71,8 @@ mysql_free_result($result);
 						<th>Uploaded By</th>
 					</tr>
 <?php
-mysql_connect("localhost", "root", "") or
-    die("Could not connect: " . mysql_error());
-mysql_select_db("htmltemplate");
+mysql_connect($host, $dbuser, $dbpass) or die( " Unable to connect to server ");
+mysql_select_db($dbname);
 
 $result = mysql_query("SELECT id, size, file, post_date, update_date, uploader, path FROM download WHERE type='2' ORDER BY update_date DESC");
 

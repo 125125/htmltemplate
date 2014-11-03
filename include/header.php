@@ -1,6 +1,7 @@
 <?php
   session_start();
 include('/config/vars.php');
+include('config/db_connect.php');
 ?>
 <!DOCTYPE html>
 <html>

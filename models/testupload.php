@@ -1,4 +1,5 @@
-<?php 
+<?php
+include('../config/db_connect.php');
 print_r($_FILES);
 if (isset($_POST['startuploading'])) {
 	
@@ -47,7 +48,7 @@ if (isset($_POST['startuploading'])) {
 ?>
 <?php
 require_once '../models/check_login.php';
-$con=mysqli_connect("localhost","root","","htmltemplate");
+$con=mysqli_connect($host,$dbuser,$dbpass,$dbname);
 
 // Check connection
 if (mysqli_connect_errno()) {
