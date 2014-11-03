@@ -2,11 +2,11 @@
 session_start();
 include('../config/acc_db.php');
 
-function sha_password($user,$pass)
+function sha_password($dbuser,$dbpass)
 {
-    $user = strtoupper($user);
-    $pass = strtoupper($pass);
-    return SHA1($user.':'.$pass);
+    $dbuser = strtoupper($dbuser);
+    $dbpass = strtoupper($dbpass);
+    return SHA1($dbuser.':'.$dbpass);
 }
 
 if (isset($_POST['uname']) and isset($_POST['pass'])){

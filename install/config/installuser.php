@@ -16,6 +16,8 @@ if ($_POST['pass'] == $_POST['pass2'])
 $username = $_POST['uname'];
 $password = sha_password($username,$_POST['pass']);
 $mail = $_POST['email'];
+$level = $_POST['gmlevel'];
+$realm = $_POST['realm'];
 
 $query = "SELECT id FROM `account` WHERE username='$username'"; 
 
@@ -29,8 +31,10 @@ if ($count == 1)
 	else
 	{ 
 		$register = "INSERT INTO `account` (username, sha_pass_hash, email, reg_mail) VALUES ('$username', '$password', '$mail', '$mail')";
+		$setgm = "INSERT INTO account_access (id, gmlevel, RealmID) VALUES ((SELECT id FROM `account` WHERE username='$username'), '$level', '$realm')";
 		$regi_result = mysql_query($register);
-		header("Location: ../?p=register_success");
+		$regi_result2 = mysql_query($setgm);
+		header('location: ../index.php');
 	}
 }
 else

@@ -50,4 +50,5 @@ $_SESSION["dbname"] = "$dbname";
 $_SESSION["chardb"] = "$chardb";
 $_SESSION["authdb"] = "$authdb";
 $_SESSION["worlddb"] = "$worlddb";
+header('location: ../userinsert.php')
 ?>
